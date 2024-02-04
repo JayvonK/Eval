@@ -253,5 +253,3 @@ btnLight.addEventListener('click', (event) => {
     yBtn.className = "btn btn-default border border-primary ";
     zBtn.className = "btn btn-default border border-primary ";
 })
-
-console.log(btns);

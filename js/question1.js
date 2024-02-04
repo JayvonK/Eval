@@ -17,7 +17,7 @@ let value = "";
 const GetTimer = async () => {
     const promise = await fetch('http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json');
     const data = await promise.json();
-    return `Temperature is ${data.dataseries[0].temp2m} celsius`;
+    return `Temperature is ${data.dataseries[0].temp2m} degrees celsius`;
 }
 
 const GetAgify = async () => {
