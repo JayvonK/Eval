@@ -1,0 +1,76 @@
+{
+    "studentList": [
+        {
+            "firstName": "Avery",
+            "lastName": "HillStrom",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Ellie",
+            "lastName": "Rasuli",
+            "email": "erasulie@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Jayvon",
+            "lastName": "Khuth",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Kenneth",
+            "lastName": "Martinez",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Marcos",
+            "lastName": "Rodriguez",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Isaiah",
+            "lastName": "Ferguson",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Jessie",
+            "lastName": "Lamzon",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Jacob",
+            "lastName": "Dekok",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Joseph",
+            "lastName": "Poncini",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Zahid",
+            "lastName": "Ahfsar",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Flysaiah",
+            "lastName": "Fergy",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        },
+        {
+            "firstName": "Alex",
+            "lastName": "Soria",
+            "email": "ahillstrom@sjcoe.net",
+            "phoneNumber": "2095555555"
+        }
+    ]
+}
