@@ -1,3 +1,4 @@
+//Simply making our html elements accessible
 let studentName = document.getElementById("studentName");
 let aBtn = document.getElementById("aBtn");
 let bBtn = document.getElementById("bBtn");
@@ -28,10 +29,13 @@ let zBtn = document.getElementById("zBtn");
 let firstNameBtn = document.getElementById("firstNameBtn");
 let lastNameBtn = document.getElementById("lastNameBtn");
 
+//Creating a student array that will hold the first and last name of certain students
 let studentArr = [];
 
+//Creating a bool variable called fName, that will be true, if the user wants to search by first name, and will be false if user wants to search by last name
 let fName = true;
 
+//Just two simple click events for my first name button and last name button, that changes the fName bool value
 firstNameBtn.addEventListener('click', (event) => {
     fName = true;
 })
@@ -40,22 +44,28 @@ lastNameBtn.addEventListener('click', (event) => {
     fName = false;
 })
 
+//Basic async function that fetches data from my students list
 const student = async () => {
     const promise = await fetch('../data/students.json');
     const data = await promise.json();
     return data.studentList;
 }
 
+//Making another async funtion that has one parameter and will search through the fetched data based off of the value of the paremeter
 const searchName = async (letter) => {
     studentArr = [];
     let arr = await student();
+
+    //The if else statement is to check whether or not the user wants to search by last name or first name
     if (fName) {
+        //Using map function to iterate through the array, and checking whether or not the first letter of the student's name is equal to the parameter that's passed through
         arr.map(student => {
             if (student.firstName[0].toLowerCase() === letter) {
                 studentArr.push(student.firstName + " " + student.lastName)
             }
         })
     } else {
+        //Same thing as above, using map function to iterate through the array, but it will check the first letter of the student's last name
         arr.map(student => {
             if (student.lastName[0].toLowerCase() === letter) {
                 studentArr.push(student.firstName + " " + student.lastName)
@@ -63,6 +73,7 @@ const searchName = async (letter) => {
         })
     }
 
+    //This if else statement, is what populates the student's names onto the website, and if no student's names are in the array, it will show "No Student" on the website
     if (studentArr.length !== 0) {
         studentName.textContent = studentArr.join(", ");
     } else {
@@ -70,6 +81,7 @@ const searchName = async (letter) => {
     }
 }
 
+//All the event listeners below are click events for all the buttons a through z in the website, and depending on the letter of the click, it will pass in a certain paremeter inside of the searchName function
 aBtn.addEventListener('click', async (event) => {
     searchName('a');
 })
@@ -175,6 +187,7 @@ zBtn.addEventListener('click', async (event) => {
 })
 
 
+//All this code below is just allowing the page to have a dark mode and light mode. Ability to switch colors on the page from a button click
 let nav = document.getElementById("nav");
 let text1 = document.getElementById("text1");
 let text2 = document.getElementById("text2");
