@@ -1,3 +1,4 @@
+//Basic usage of document.getElementById() to allow the html elements be accessible in the js file
 let wickedCssClass = document.getElementById("wickedCssClass");
 let wickedCSSBtn = document.getElementById("wickedCSSBtn");
 let randomCSSBtn = document.getElementById("randomCSSBtn");
@@ -24,9 +25,10 @@ let dropdown19 = document.getElementById("dropdown19");
 let dropdown20 = document.getElementById("dropdown20");
 let dropdown21 = document.getElementById("dropdown21");
 
+//Creating a varibale to store the name of a wickedCssClass
 let wickedClass = "";
 
-
+//Creating an array variable to hold all of the wickedCss classes
 let wickedArr = ["barrelRoll",
     "fadeIn",
     "floater",
@@ -49,16 +51,20 @@ let wickedArr = ["barrelRoll",
     "zoomer",
     "zoomerOut"]
 
+//This function's purpose is to change the className of the box in the website to give it an animation from wicked css
 const ChangeClass = (name) => {
+    //Takes in a paremeter and checks if the paremeter is included in the wickedArr, and if it's included inside of the array, then it will change the box's animation
     if(wickedArr.includes(name)){
         result.className = `${name} simple-box pt-5`;
     }
 }
 
+//Creating an event listener that will run off of the user's click, and it will pass through the user's input into the ChangeClass function
 wickedCSSBtn.addEventListener('click', (event) => {
     ChangeClass(wickedCssClass.value);
 })
 
+//Creating another event listener that runs off of the user's click, and it uses math.random to grab a value that's within the wickedArr's index, uses that index in bracket notation to add an animation class to the box
 randomCSSBtn.addEventListener('click', (event) => {
     let index = Math.floor(Math.random() * wickedArr.length);
     result.className = `${wickedArr[index]} simple-box pt-5`;

@@ -1,3 +1,4 @@
+//All this code below is just allowing the page to have a dark mode and light mode. Ability to switch colors on the page from a button click
 let nav = document.getElementById("nav");
 let text1 = document.getElementById("text1");
 let text2 = document.getElementById("text2");
